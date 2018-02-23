@@ -1,5 +1,5 @@
 # web-330
-Repository for my web-330 class.
+Enterprise JavaScript II
 # contributors
 Professor Krasso - Bellevue University
 Ashlee Correll - Bellevue University
