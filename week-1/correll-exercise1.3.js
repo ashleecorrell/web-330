@@ -4,7 +4,7 @@ var header = require('../header.js');
 console.log(header.display("Ashlee", "Correll", "Exercise 1.3")); 
 console.log("\n");
 
-var header = require('../header.js');
+
 
 /*
 Title: Exercise 1.3
