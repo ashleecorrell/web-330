@@ -22,10 +22,10 @@ var Person = {
         return this.age;
     }
 }
-
+//create new object literal
 var ashlee = Object.create (Person,{
     "age": {
-        "value": "25"
+        "value": "25" 
     },
     "fullname":{
         "value": "Ashlee Correll"
@@ -33,11 +33,11 @@ var ashlee = Object.create (Person,{
 
 });
 
-ashlee.getAge();
+ashlee.getAge(); //pass the getAge function
 
-console.log(ashlee.age);
+console.log(ashlee.age); //output the age
 
-console.log(ashlee.fullname);
+console.log(ashlee.fullname); //output full name
 
 
 
