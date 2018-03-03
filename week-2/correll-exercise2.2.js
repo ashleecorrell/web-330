@@ -35,9 +35,9 @@ var ashlee = Object.create (Person,{
 
 ashlee.getAge(); //pass the getAge function
 
-console.log(ashlee.age); //output the age
+console.log("The persons age is " + ashlee.age); //output the age
 
-console.log(ashlee.fullname); //output full name
+console.log("The persons full name is " + ashlee.fullname); //output full name
 
 
 
