@@ -1,0 +1,49 @@
+<!-- Title: Exercise 4.2
+
+Author: Richard Krasso
+
+Date: 18 March 2018
+
+Modified by: Ashlee Correll
+
+Description: HTML coding assignment to learn about get operations.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment name</title>
+
+    <!-- jQuery reference -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <h4>HTTP DELETE Request</h4>
+    <!-- Create a button with an ID-->
+    <button id="delete1">Delete Button</button>
+
+<script>
+
+    $(function() {
+        //register an onClick event and create an object literal DELETE request
+        $("#delete1").click(function(){
+            $.ajax({
+                url: "http://httpbin.org/delete",
+                dataType: "json",
+                type: "DELETE",
+                data: {username: "Ashlee", password: "Don'tTell", email:"somebody@gmail.com"},//Create an object literal with 3 fields
+                success: function (data,status){
+                    //output the results
+                    console.log("Username: " + data.form.username + "\nPassword: " + data.form.password + "\nEmail: " + data.form.email + "\nStatus: " + status);
+                }
+            })
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
+
