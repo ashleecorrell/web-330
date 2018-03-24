@@ -1,0 +1,79 @@
+<!-- Title: Exercise 5.2
+
+Author: Richard Krasso
+
+Date: 23 March 2018
+
+Modified by: Ashlee Correll
+
+Description: HTML coding assignment to learn about the Proxy Pattern.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5.2 - The Proxy Pattern</title>
+
+    <!-- jquery Reference Library -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!--CSS styles -->
+    <style>
+        h2, nav {
+            color: darkcyan;
+            background-color: lightcoral;
+            font-weight: bold;
+        }
+        a {
+            color:aqua;
+        }
+        button, span{
+            color: darkcyan;
+        }
+        
+    
+    </style>
+
+</head>
+<body>
+    <!--nav bar-->
+    <nav>
+        <a href="a">Home</a>
+    </nav>
+
+    <br /><br />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!--h2 heading-->
+                <h2>The Proxy Pattern</h2> 
+                <!--Button to trigger function event-->
+                <button id="btnExample1">Run Test</button>
+                <br/><span id="proxyExampleOne"></span>
+            </div>
+        </div>
+    </div>
+    
+<script>
+    //The Proxy Pattern
+    $(function() {
+        var dog = {
+        breed: "Husky",
+        size: "large",
+        energy: "high",
+        display:function(){
+            //clear the span tag
+            $("#proxyExampleOne").html("");
+            //append to a span tag
+            $("#proxyExampleOne").append("<br/>A " + this.breed + " is a " + this.size + " dog with a " + this.energy + " energy level.");
+        }
+
+    };
+    //display on click
+    $("#btnExample1").click($.proxy(dog, "display"));
+    });
+</script>
+
+
+</body>
+</html>
